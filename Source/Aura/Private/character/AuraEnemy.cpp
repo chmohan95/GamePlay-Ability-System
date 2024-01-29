@@ -3,3 +3,11 @@
 
 #include "character/AuraEnemy.h"
 
+void AAuraEnemy::Highlight()
+{
+}
+
+void AAuraEnemy::UnHighlight()
+{
+	
+}
