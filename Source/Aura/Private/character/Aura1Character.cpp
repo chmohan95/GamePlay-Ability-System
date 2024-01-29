@@ -3,4 +3,19 @@
 
 #include "character/Aura1Character.h"
 
+#include "GameFramework/CharacterMovementComponent.h"
 
+
+AAura1Character::AAura1Character()
+{
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->RotationRate = FRotator(0.f,400.f,0.f);
+	GetCharacterMovement()->bConstrainToPlane = true;
+	GetCharacterMovement()->bSnapToPlaneAtStart = true;
+
+
+	bUseControllerRotationPitch= false;
+	bUseControllerRotationRoll= false;
+	bUseControllerRotationYaw = false;
+	
+}

@@ -17,7 +17,7 @@ class AURA_API AAura1Character : public AAuraCharacterBase
 
 public:
 
-	
+	AAura1Character();
 	
 
 private:
