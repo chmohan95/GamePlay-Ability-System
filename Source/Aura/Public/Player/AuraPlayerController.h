@@ -12,7 +12,6 @@
  * 
  */
 class IEnemyInterface;
-
 class UInputAction;
 UCLASS()
 
@@ -39,5 +38,4 @@ private:
 	void cursorTrace();
 	IEnemyInterface* LastActor;
 	IEnemyInterface* ThisActor;
-	
 };

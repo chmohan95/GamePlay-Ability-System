@@ -31,11 +31,9 @@ void AAuraPlayerController::cursorTrace()
 		if (ThisActor != nullptr)
 		{
 			ThisActor->Highlight();
-			
 		}
 		else
 		{
-			
 		}
 	}
 	else
@@ -54,7 +52,6 @@ void AAuraPlayerController::cursorTrace()
 			}
 			else
 			{
-				
 			}
 		}
 	}
