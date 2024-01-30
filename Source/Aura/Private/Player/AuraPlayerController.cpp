@@ -4,11 +4,63 @@
 #include "Player/AuraPlayerController.h"
 #include  "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Intraction/EnemyInterface.h"
 
 AAuraPlayerController::AAuraPlayerController()
 {
 	bReplicates =true;
 }
+
+void AAuraPlayerController::PlayerTick(float DeltaTime)
+{
+	Super::PlayerTick(DeltaTime);
+	cursorTrace();
+	
+}
+void AAuraPlayerController::cursorTrace()
+{
+	FHitResult CursorHit;
+	GetHitResultUnderCursor(ECC_Visibility,false,CursorHit);
+	if (!CursorHit.bBlockingHit)return;
+	
+	LastActor =  ThisActor;
+	ThisActor = Cast<IEnemyInterface>(CursorHit.GetActor());
+
+	if (LastActor == nullptr)
+	{
+		if (ThisActor != nullptr)
+		{
+			ThisActor->Highlight();
+			
+		}
+		else
+		{
+			
+		}
+	}
+	else
+	{
+		if (ThisActor == nullptr)
+		{
+			LastActor->UnHighlight();
+		}
+		else
+		{
+			if (LastActor != nullptr)
+			{
+				LastActor->UnHighlight();
+				ThisActor->Highlight();
+				
+			}
+			else
+			{
+				
+			}
+		}
+	}
+	
+}
+
 
 void AAuraPlayerController::BeginPlay()
 {
@@ -55,5 +107,7 @@ void AAuraPlayerController::Move(const FInputActionValue& InputActionValue)
 		
 	}
 }
+
+
 
 
