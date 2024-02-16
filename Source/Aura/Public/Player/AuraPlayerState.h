@@ -20,6 +20,7 @@ class AURA_API AAuraPlayerState : public APlayerState, public IAbilitySystemInte
 public:
 	AAuraPlayerState();
 	UAbilitySystemComponent* GetAbilitySystemComponent() const;
+	
 	//Multiplayer online player 
 	UPROPERTY()
 	TObjectPtr<UAuraAbilitySystemComponent> AbilitySystemComponent;

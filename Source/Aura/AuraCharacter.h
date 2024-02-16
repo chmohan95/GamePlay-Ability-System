@@ -45,10 +45,13 @@ class AAuraCharacter : public ACharacter
 	UInputAction* LookAction;
 
 public:
+
+
 	AAuraCharacter();
 	
 
 protected:
+
 
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
@@ -58,6 +61,8 @@ protected:
 			
 
 protected:
+
+	
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
@@ -65,9 +70,11 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
 };
 

@@ -4,7 +4,7 @@
 #include "character/AuraEnemy.h"
 
 #include "Aura/Aura.h"
-#include "AbilitySystem/AuraAttributeSet.h"
+//#include "AbilitySystem/AuraAttributeSet.h"
 #include  "AbilitySystem/AuraAbilitySystemComponent.h"
 
 AAuraEnemy::AAuraEnemy()
@@ -32,5 +32,13 @@ void AAuraEnemy::UnHighlight()
 {
 	GetMesh()->SetRenderCustomDepth(false);
 	Weapon->SetRenderCustomDepth(false);
+	
+}
+
+void AAuraEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+	AbilitySystemComponent->InitAbilityActorInfo(this,this);
+
 	
 }
