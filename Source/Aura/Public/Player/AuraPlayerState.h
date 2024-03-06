@@ -25,9 +25,9 @@ public:
 	UPROPERTY()
 	TObjectPtr<UAuraAbilitySystemComponent> AbilitySystemComponent;
 	UPROPERTY()
-	TObjectPtr<UAttributeSet> AttributeSet;
+	TObjectPtr<UAttributeSet> GetAttributeSet;
 
-
+private:
 	
 	
 };

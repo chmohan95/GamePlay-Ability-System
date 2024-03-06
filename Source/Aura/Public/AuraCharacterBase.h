@@ -22,7 +22,6 @@ public:
 	UAttributeSet* GetAttributeSet() const {return AttributeSet;}
 
 protected:
-	
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere,Category ="Combact")
